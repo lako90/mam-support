@@ -22,7 +22,7 @@ class Winds extends Component {
   }
 
   handleClick = () => {
-    this.setState({ wind: winds[random(winds.length)] });
+    this.setState({ wind: winds[random(winds.length - 1)] });
   }
 
   render() {
