@@ -5,7 +5,7 @@ import drop from 'lodash/drop';
 
 import Button from '../Button';
 
-const staticMarines = [
+const staticNavies = [
   'French',
   'English',
   'Spanish',
@@ -16,21 +16,31 @@ class AtWar extends Component {
   constructor() {
     super();
 
-    this.state = { marines: false };
+    this.state = { navies: false };
   }
 
   handleClick = () => {
-    this.setState({ marines: drop(shuffle(staticMarines), staticMarines.length - 2) });
+    const { navies } = this.state;
+
+    this.setState({
+      navies: (Array.isArray(navies)) ? 'Peace' : drop(shuffle(staticNavies), staticNavies.length - 2),
+    });
   }
 
+  renderNavies = navies => (
+    Array.isArray(navies)
+      ? navies.map(navy => <div key={navy}>{navy}</div>)
+      : navies
+  )
+
   render() {
-    const { marines } = this.state;
+    const { navies } = this.state;
 
     return (
       <Button block onClick={this.handleClick}>
         {
-          marines
-            ? marines.map(marine => <div key={marine}>{marine}</div>)
+          navies
+            ? this.renderNavies(navies)
             : <span><i>{'At War!!'}</i></span>
         }
       </Button>
