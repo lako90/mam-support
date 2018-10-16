@@ -10,7 +10,6 @@ const staticNavies = [
   'French',
   'English',
   'Spanish',
-  'Portuguese',
 ];
 
 class AtWar extends Component {
