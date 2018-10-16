@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import { withStyles } from '@material-ui/core/styles';
-import MuiButton from '@material-ui/core/Button';
+import ButtonBase from '@material-ui/core/ButtonBase';
 
 const styles = {
   root: {
@@ -14,6 +14,7 @@ const styles = {
 
 class Button extends Component {
   static propTypes = {
+    block: PropTypes.bool,
     children: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.node),
       PropTypes.node,
@@ -23,6 +24,7 @@ class Button extends Component {
   }
 
   static defaultProps = {
+    block: false,
     onClick: () => true,
   }
 
@@ -32,15 +34,16 @@ class Button extends Component {
   }
 
   render() {
-    const { classes, children } = this.props;
+    const { block, classes, children } = this.props;
 
     return (
-      <MuiButton
+      <ButtonBase
+        style={{ display: block ? 'block' : 'inline-flex' }}
         className={classes.root}
         onClick={this.handleClick}
       >
         {children}
-      </MuiButton>
+      </ButtonBase>
     );
   }
 }

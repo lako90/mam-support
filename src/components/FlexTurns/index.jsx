@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import shuffle from 'lodash/shuffle';
 
 import red from '@material-ui/core/colors/red';
