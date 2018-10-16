@@ -6,6 +6,7 @@ import drop from 'lodash/drop';
 import Button from '../Button';
 
 const staticNavies = [
+  'Dutch',
   'French',
   'English',
   'Spanish',
