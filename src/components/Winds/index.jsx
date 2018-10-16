@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import random from 'lodash/random';
 
 import Button from '../Button';
 
@@ -21,7 +22,7 @@ class Winds extends Component {
   }
 
   handleClick = () => {
-    this.setState({ wind: winds[Math.floor(Math.random() * winds.length)] });
+    this.setState({ wind: winds[random(winds.length)] });
   }
 
   render() {
