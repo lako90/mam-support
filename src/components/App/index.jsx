@@ -10,6 +10,7 @@ import Paper from '@material-ui/core/Paper';
 
 import Winds from '../Winds';
 import FlexTurns from '../FlexTurns';
+import AtWar from '../AtWar';
 
 const styles = ({ spacing, palette }) => ({
   root: {
@@ -60,7 +61,7 @@ class App extends Component {
               <Paper className={classes.paper}><FlexTurns /></Paper>
             </Grid>
             <Grid item xs={6} md={4}>
-              <Paper className={classes.paper}>{'asd'}</Paper>
+              <Paper className={classes.paper}><AtWar /></Paper>
             </Grid>
           </Grid>
         </main>
