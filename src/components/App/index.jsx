@@ -9,6 +9,7 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 
 import Winds from '../Winds';
+import FlexTurns from '../FlexTurns';
 
 const styles = ({ spacing, palette }) => ({
   root: {
@@ -56,7 +57,7 @@ class App extends Component {
               <Paper className={classes.paper}><Winds /></Paper>
             </Grid>
             <Grid item xs={6} md={4}>
-              <Paper className={classes.paper}>{'asd'}</Paper>
+              <Paper className={classes.paper}><FlexTurns /></Paper>
             </Grid>
             <Grid item xs={6} md={4}>
               <Paper className={classes.paper}>{'asd'}</Paper>
