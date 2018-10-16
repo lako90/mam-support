@@ -8,6 +8,8 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 
+import Winds from '../Winds';
+
 const styles = ({ spacing, palette }) => ({
   root: {
     backgroundColor: '#A9494A',
@@ -51,7 +53,7 @@ class App extends Component {
             alignItems="stretch"
           >
             <Grid item xs={6} md={4}>
-              <Paper className={classes.paper}>{'asd'}</Paper>
+              <Paper className={classes.paper}><Winds /></Paper>
             </Grid>
             <Grid item xs={6} md={4}>
               <Paper className={classes.paper}>{'asd'}</Paper>
