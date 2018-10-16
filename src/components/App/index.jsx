@@ -16,13 +16,13 @@ const styles = ({ spacing, palette }) => ({
   root: {
     backgroundColor: '#A9494A',
     height: '100vh',
-    padding: spacing.unit * 3,
+    padding: spacing.unit * 2.5,
   },
   main: {
-    marginTop: spacing.unit * 3,
+    marginTop: spacing.unit * 2.5,
   },
   paper: {
-    height: spacing.unit * 20,
+    height: spacing.unit * 15,
     padding: spacing.unit * 2,
     textAlign: 'center',
     color: palette.text.secondary,
@@ -60,7 +60,7 @@ class App extends Component {
             <Grid item xs={6} md={4}>
               <Paper className={classes.paper}><FlexTurns /></Paper>
             </Grid>
-            <Grid item xs={6} md={4}>
+            <Grid item xs={12} md={8}>
               <Paper className={classes.paper}><AtWar /></Paper>
             </Grid>
           </Grid>
